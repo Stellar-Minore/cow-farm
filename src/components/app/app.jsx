@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Styles from './app.module.scss';
 import { LandingScreen } from '../landingScreen';
+import { CowFarmScreen } from '../cowFarmScreen';
 
 function App() {
 	return (
@@ -8,6 +9,7 @@ function App() {
 			<Layout>
 				<Routes>
 					<Route path="/" element={<LandingScreen />} />
+					<Route path="/cow-farm" element={<CowFarmScreen />} />
 				</Routes>
 			</Layout>
 		</div>
