@@ -1,0 +1,1 @@
+export { CowChick } from './cowChick';
