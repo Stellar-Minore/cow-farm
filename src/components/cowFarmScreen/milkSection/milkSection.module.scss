@@ -1,0 +1,36 @@
+@import '../../../utils/sass/mixins.scss';
+
+.mainContainer {
+	width: 100vw;
+	height: 600px;
+	background: #fcf4e4;
+	font-family: 'Delius Swash Caps', cursive;
+}
+
+.hutLottieContainer {
+	@include flex();
+
+	width: 100%;
+	height: 100%;
+
+	div {
+		height: 100%;
+		margin-bottom: 100px;
+	}
+}
+
+.milkBottlesContainer {
+	@include flex(center, center, column);
+
+	text-align: center;
+
+	h4 {
+		width: 80%;
+		margin-top: 100px;
+	}
+
+	img {
+		height: 150px;
+		margin-top: 50px;
+	}
+}
