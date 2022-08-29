@@ -1,0 +1,15 @@
+@import '../../../utils/sass/mixins.scss';
+
+.mainContainer {
+	@include flex(center, center, column);
+
+	width: 100vw;
+	height: 800px;
+	background: #fcf4e4;
+	font-family: 'Delius Swash Caps', cursive;
+
+	h1,
+	h2 {
+		opacity: 0;
+	}
+}
