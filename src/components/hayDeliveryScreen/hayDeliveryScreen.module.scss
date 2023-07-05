@@ -1,0 +1,48 @@
+@import '../../utils/sass/mixins.scss';
+
+.mainContainer {
+	@include flex(flex-start, center, column);
+
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+
+	.mainHeading,
+	.subHeading {
+		opacity: 0;
+	}
+
+	.nextButton {
+		opacity: 0;
+		transform: none;
+	}
+}
+
+.textContainer {
+	width: 100vw;
+	padding-top: 100px;
+	text-align: center;
+}
+
+.truckContainer {
+	position: relative;
+	width: 100vw;
+	height: 350px;
+
+	.hayTruck {
+		position: absolute;
+		right: -400px;
+		bottom: 60px;
+		width: 400px;
+	}
+
+	.road {
+		position: absolute;
+		bottom: 0;
+		width: 100vw;
+		height: 60px;
+		background: #333;
+		outline: 10px dashed #fff;
+		outline-offset: -30px;
+	}
+}
