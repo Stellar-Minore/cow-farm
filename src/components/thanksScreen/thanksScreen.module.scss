@@ -1,0 +1,21 @@
+@import '../../utils/sass/mixins.scss';
+@import '../../utils/sass/variables.scss';
+
+.mainContainer {
+	@include flex(center, center, column);
+
+	width: 100vw;
+	height: 100vh;
+	background: $secondary-color;
+
+	.mainHeading,
+	.subHeading {
+		text-align: center;
+		opacity: 0;
+	}
+
+	.startButton {
+		opacity: 0;
+		transform: none;
+	}
+}
