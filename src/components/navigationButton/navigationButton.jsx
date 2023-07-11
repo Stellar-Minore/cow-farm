@@ -1,8 +1,25 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
+import Styles from './navigationButton.module.scss';
 
-function NavigationButton() {
+function NavigationButton(props) {
+	const {
+		route, type, color, title, icon
+	} = props;
+	const navigate = useNavigate();
+
+	function pageTransition() {
+		navigate(route);
+	}
+
 	return (
-		<div> NavigationButton </div>
+		<button
+			className={`mt-4 mb-0 ${Styles.navigationButton} ${color === 'primary' ? Styles.primary : Styles.secondary}`}
+			onClick={() => pageTransition()}>
+			{type === 'previous' && icon}
+			<span className={Styles.buttonText}>{title}</span>
+			{type === 'next' && icon}
+		</button>
 	);
 }
 
