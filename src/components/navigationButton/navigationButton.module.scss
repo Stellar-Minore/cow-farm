@@ -1,0 +1,48 @@
+@import '../../utils/sass/mixins.scss';
+@import '../../utils/sass/variables.scss';
+
+.navigationButton {
+	@include flex();
+
+	width: fit-content;
+	margin: 0;
+	padding: 8px 24px;
+	border: 1px solid #666;
+	border-radius: 20px;
+	color: #666;
+	font-weight: bold;
+	font-size: 14px;
+	transition: all 0.5s ease;
+
+	.buttonText {
+		margin: 0 4px;
+		transition: all 0.2s ease;
+	}
+
+	&:hover {
+		padding: 8px 32px;
+		border-color: #000;
+		color: #000;
+		font-weight: bolder;
+
+		.buttonText {
+			margin: 0 8px;
+		}
+	}
+}
+
+.primary {
+	background-color: $primary-color;
+
+	&:hover {
+		background-color: $secondary-color;
+	}
+}
+
+.secondary {
+	background-color: $secondary-color;
+
+	&:hover {
+		background-color: $primary-color;
+	}
+}
