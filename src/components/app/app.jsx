@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Styles from './app.module.scss';
 import { LandingScreen } from '../landingScreen';
 import { CowFarmScreen } from '../cowFarmScreen';
@@ -16,6 +16,7 @@ function App() {
 					<Route path="/cow-farm/milk" element={<MilkScreen />} />
 					<Route path="/cow-farm/hay-delivery" element={<HayDeliveryScreen />} />
 					<Route path="/cow-farm/thanks" element={<ThanksScreen />} />
+					<Route path='*' element={<Navigate replace to="/" />}/>
 				</Routes>
 			</Layout>
 		</div>
