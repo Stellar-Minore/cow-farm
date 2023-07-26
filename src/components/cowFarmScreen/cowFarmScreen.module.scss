@@ -1,3 +1,79 @@
+@import '../../utils/sass/mixins.scss';
+
 .mainContainer {
-	min-height: 100vh;
+	position: relative;
+	height: 100vh;
+	min-height: 700px;
+
+	.cloud1,
+	.cloud2 {
+		position: absolute;
+		opacity: 0;
+	}
+
+	.cloud1 {
+		top: 90px;
+		left: 50px;
+		height: 160px;
+	}
+
+	.cloud2 {
+		top: 30px;
+		left: 350px;
+		height: 120px;
+	}
+
+	.cowContainer {
+		position: relative;
+		height: 100%;
+
+		.blobImage,
+		.cowImage {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			opacity: 0;
+		}
+
+		.blobImage {
+			height: 90%;
+		}
+
+		.cowImage {
+			height: 60%;
+		}
+	}
+
+	.textContainer {
+		@include flex(center, initial, column);
+
+		height: 100%;
+		padding-left: 10vw;
+		font-weight: bold;
+
+		.mainHeading,
+		.subHeading {
+			line-height: 1.4;
+			opacity: 0;
+		}
+
+		.nextButton {
+			opacity: 0;
+		}
+	}
+
+	.chickLottieContainer {
+		position: absolute;
+		bottom: -20px;
+		left: -100px;
+		width: 100vw;
+
+		.chickLottie {
+			width: 120px;
+			height: 100px;
+		}
+	}
 }
