@@ -23,6 +23,3 @@ Use the following command in your terminal to start up the project.
 ```bash
 npm start
 ```
-
-## Creators
-[Samrah Sajid](https://github.com/SamrahS)
